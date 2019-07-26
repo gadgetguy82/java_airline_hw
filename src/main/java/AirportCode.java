@@ -1,4 +1,5 @@
 public enum AirportCode {
   EDI,
-  GLA
+  GLA,
+  LHR
 }

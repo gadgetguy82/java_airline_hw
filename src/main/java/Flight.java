@@ -36,6 +36,10 @@ public class Flight {
     return departureTime;
   }
 
+  public ArrayList<Passenger> getPassengers() {
+    return passengers;
+  }
+
   public int passengerCount() {
     return this.passengers.size();
   }
