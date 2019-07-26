@@ -50,14 +50,19 @@ public class FlightManagerTest {
   @Test
   public void canSortPassengersBySeatNumbers() {
     flightManager2.bubbleSort(flight2.getPassengers());
-    for (int i = 0; i < flight2.passengerCount(); i++) {
-      System.out.println(flight2.getPassenger(i).getSeatNumber());
+    boolean sorted = true;
+    for (int i = 0; i < flight2.passengerCount() - 1; i++) {
+      if (flight2.getPassenger(i).getSeatNumber() > flight2.getPassenger(i + 1).getSeatNumber()){
+        sorted = false;
+        break;
+      }
     }
+    assertEquals(true, sorted);
   }
 
   @Test
   public void canSearchPassengerBySeatNumber() {
     Passenger passengerFound = flightManager2.binarySearch(flight2.getPassengers(), passenger3.getSeatNumber());
-    System.out.println(passengerFound.getName());
+    assertEquals("Harry", passengerFound.getName());
   }
 }

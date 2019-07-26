@@ -28,9 +28,4 @@ public class Passenger {
     this.flight = flight;
     this.seatNumber = this.flight.assignSeat();
   }
-
-  public void bookSeat(int seatNumber) {
-    this.seatNumber = seatNumber;
-//    System.out.println(this.seatNumber);
-  }
 }

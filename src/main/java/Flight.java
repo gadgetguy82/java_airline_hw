@@ -68,7 +68,6 @@ public class Flight {
     if (availableSeats()) {
       this.passengers.add(passenger);
       passenger.addFlight(this);
-      passenger.bookSeat(assignSeat());
     }
   }
 
@@ -79,7 +78,6 @@ public class Flight {
       seatNo += 1;
       if (!seatsBooked.contains(seatNo)) {
         seatsBooked.add(seatNo);
-//        System.out.println(seatNo);
         return seatNo;
       } else {
         return assignSeat();
