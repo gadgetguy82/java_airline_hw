@@ -48,10 +48,6 @@ public class Flight {
     return this.passengers.get(index);
   }
 
-  public void setPassenger(int index, Passenger passenger) {
-    this.passengers.add(index, passenger);
-  }
-
   public int passengerCount() {
     return this.passengers.size();
   }
